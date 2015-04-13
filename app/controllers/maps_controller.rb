@@ -15,7 +15,7 @@ class MapsController < ApplicationController
     @map = Map.new(map_params)
 
     if @map.save
-      flash[:notice] = "Map was successfully created"
+      flash[:notice] = "Map was successfully created."
       redirect_to maps_path
     else
       render :action => :new
@@ -31,7 +31,7 @@ class MapsController < ApplicationController
 
   def update
     if @map.update(map_params)
-      flash[:notice] = "Map was successfully updated"
+      flash[:notice] = "Map was successfully updated."
       redirect_to map_path
     else
       render :action => :edit
@@ -41,7 +41,7 @@ class MapsController < ApplicationController
   def destroy
     @map.destroy
 
-    flash[:alert] = "Map was successfully deleted"
+    flash[:alert] = "Map was successfully deleted."
 
     redirect_to maps_path
   end
